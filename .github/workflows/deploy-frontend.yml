@@ -30,13 +30,13 @@ jobs:
       - name: Build
         working-directory: frontend
         env:
-          VITE_API_URL: https://finflow-api.azurewebsites.net/api
+          VITE_API_URL: https://finflow-salina-api.azurewebsites.net/api
         run: npm run build
 
       - name: Enable static website hosting
         run: |
           az storage blob service-properties update \
-            --account-name finflow \
+            --account-name finflowsalina \
             --account-key "${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }}" \
             --static-website \
             --index-document index.html \
@@ -45,7 +45,7 @@ jobs:
       - name: Upload build to $web container
         run: |
           az storage blob upload-batch \
-            --account-name finflow \
+            --account-name finflowsalina \
             --account-key "${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }}" \
             --source frontend/dist \
             --destination '$web' \
@@ -54,7 +54,7 @@ jobs:
       - name: Upload index.html as 404.html for SPA routing
         run: |
           az storage blob upload \
-            --account-name finflow \
+            --account-name finflowsalina \
             --account-key "${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }}" \
             --container-name '$web' \
             --name '404.html' \

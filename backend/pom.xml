@@ -21,8 +21,8 @@
     <java.version>21</java.version>
     <azure-spring.version>5.19.0</azure-spring.version>
     <azure-functions-plugin.version>1.36.0</azure-functions-plugin.version>
-    <functionAppName>finflow-api</functionAppName>
-    <functionResourceGroup>CNE-handson</functionResourceGroup>
+    <functionAppName>finflow-salina-api</functionAppName>
+    <functionResourceGroup>finflow-salina-rg</functionResourceGroup>
     <functionRegion>francecentral</functionRegion>
   </properties>
 
