@@ -4,6 +4,15 @@
 
 A cloud-native personal finance tracker built on Microsoft Azure.
 
+## My Contributions
+
+This was originally a team project built together with [ZakariaShahruriUCLL](https://github.com/ZakariaShahruriUCLL). This repository is my personal copy, preserved with the full original commit history and authorship. My specific contributions to the project were:
+
+- **Bicep IaC** for infrastructure provisioning
+- Migrating backend endpoints to **Azure Functions**
+- **Service Bus integration** for the budget alert pipeline
+- **Key Vault** setup for secrets management
+
 ### Features
 
 - **Authentication** — JWT-based register and login
